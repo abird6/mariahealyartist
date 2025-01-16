@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Healy - Artist</title>
+    <style>
+	
+		h1 {
+            font-family: 'Brush Script MT', cursive; /* Cursive font */
+            text-align: center; /* Center the heading */
+            margin-top: 50px; /* Add some space from the top */
+        }
+	
+		body {
+			font-family: 'Arial', sans-serif;  /* You can change 'Arial' to any other sans-serif font */
+			margin: 0;
+			padding: 0;
+        }
+		
+        /* Style the tab container */
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #e2e2e2;
+            border: 1px solid #ccc;
+        }
+
+        .tab:hover {
+            background-color: #ddd;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .active {
+            background-color: #ddd;
+        }
+
+        .active-content {
+            display: block;
+        }
+
+        /* Style images */
+        .image-gallery img {
+            max-width: 700px;  /* Set a fixed width */
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;  /* Center the images */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Maria Healy</h1>
+	
+	<div style="text-align: center">
+		Email: artbymariahealy.art.blog.com<br><br>Phone: +353(87)7656668
+	</div>
+
+    <!-- Tab container -->
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('images')">Gallery</div>
+        <div class="tab" onclick="showTab('text')">About the Artist</div>
+    </div>
+
+    <!-- Tab content -->
+    <div id="images" class="tab-content active-content image-gallery">
+			<img src="img/number_11_ploughing_10x8.jpg" alt="Image 1">
+			<img src="img/DSC_2124.jpg" alt="Image 2">
+			<img src="img/DSC_2147.jpg" alt="Image 3">
+			<img src="img/DSC_2764.jpg" alt="Image 4">
+			<img src="img/IMG_1036.jpg" alt="Image 5">
+
+    </div>
+
+    <div id="text" class="tab-content">
+        <p>I am a visual artist concentrating mainly in glass and textiles but sometimes in
+		ceramics. Using my own photographs, as a starting point, I manipulate them
+		digitally and this helps to drive the creativity. My current body of work is
+		about a local area which exudes an atmosphere of the sublime and of absent
+		present. I find that the traces, layers and fragments evoke a response in me. I
+		am hoping to translate these subtle traces through my art.
+		It is a deeply layered terrain of remains, memories and histories, which take on
+		another reality with the knowledge that all this area is actually a submerged
+		village. I am trying to create something tangible from an otherwise fleeting
+		memory. I am using glass as a metaphor for water. I love the translucent
+		quality of it. I am working with textiles, using threads as a metaphor for
+		connections, weaving past into present with all its colours and textures. Also,
+		by combining glass and textiles I want to depict the water which hides a fragile
+		unravelled fabric of life past.
+		I am piecing together the fragments to weave a narrative. I experiment with
+		the visual fragments dismantling them and then reforming them again in
+		another narrative which echoes what happened on this site in the past.
+		I am using the idea of mise-en-abyme, a condition in a work of art where a
+		fragment replicates the entire composition. One of the techniques I use is Pate
+		de Verre which is fragments of crushed glass, pasted together in a mold and
+		fired in the kiln. This process lends itself well to my theme of fragmentation
+		and the resulting work is very delicate and almost ephemeral in quality.</p>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active-content'));
+
+            // Remove the 'active' class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show the clicked tab's content and add the 'active' class to the tab
+            document.getElementById(tabName).classList.add('active-content');
+            document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
