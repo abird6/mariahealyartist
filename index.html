@@ -68,24 +68,30 @@
     <h1>Maria Healy</h1>
 	
 	<div style="text-align: center">
-		Email: artbymariahealy.art.blog.com<br><br>Phone: +353(87)7656668
+		Email: <a href="mailto:mariahealyartist@gmail.com">mariahealyartist@gmail.com</a><br><br>Phone: +353(87)7656668
 	</div>
 
     <!-- Tab container -->
     <div class="tabs">
-        <div class="tab active" onclick="showTab('images')">Gallery</div>
+        <div class="tab active" onclick="showTab('current_work')">Current Work</div>
+		<div class="tab" onclick="showTab('previous_work')">Previous Work</div>
         <div class="tab" onclick="showTab('text')">About the Artist</div>
     </div>
 
-    <!-- Tab content -->
-    <div id="images" class="tab-content active-content image-gallery">
+    <!-- Tab content for 'current work' -->
+    <div id="current_work" class="tab-content active-content image-gallery">
 			<img src="img/number_11_ploughing_10x8.jpg" alt="Image 1">
-			<img src="img/DSC_2124.JPG" alt="Image 2">
-			<img src="img/DSC_2147.JPG" alt="Image 3">
-			<img src="img/DSC_2764.JPG" alt="Image 4">
-			<img src="img/IMG_1036.jpg" alt="Image 5">
+    </div>
+	
+	<!-- Tab content for 'previous work' -->
+    <div id="previous_work" class="tab-content image-gallery">
+		<img src="img/DSC_2124.JPG" alt="Image 2">
+		<img src="img/DSC_2147.JPG" alt="Image 3">
+		<img src="img/DSC_2764.JPG" alt="Image 4">
+		<img src="img/IMG_1036.jpg" alt="Image 5">
 
     </div>
+
 
     <div id="text" class="tab-content">
         <p>I am a visual artist concentrating mainly in glass and textiles but sometimes in
