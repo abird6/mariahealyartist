@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Healy - Artist</title>
+    <title>Art By Maria Healy</title>
     <style>
 	
 		h1 {
@@ -17,6 +17,17 @@
 			margin: 0;
 			padding: 0;
         }
+		
+		pre {
+			font-family: 'Arial', sans-serif;  /* You can change 'Arial' to any other sans-serif font */
+			font-size: 16px;
+			white-space: pre-wrap;
+			word-wrap: break-word;
+			width: 100%
+			margin: 0;
+			padding: 10px
+		}
+		
 		
         /* Style the tab container */
         .tabs {
@@ -35,9 +46,7 @@
             border: 1px solid #ccc;
         }
 
-        .tab:hover {
-            background-color: #ddd;
-        }
+ 
 
         .tab-content {
             display: none;
@@ -46,7 +55,9 @@
         }
 
         .active {
-            background-color: #ddd;
+			background: black;
+            color: white;
+            font-weight: bold;
         }
 
         .active-content {
@@ -61,6 +72,16 @@
             display: block;
             margin: 10px auto;  /* Center the images */
         }
+		
+		/* style image titles */
+		.image-title {
+			font-family: 'Arial', sans-serif;  /* You can change 'Arial' to any other sans-serif font */
+			font-size: 16px;
+			font-style: italic;
+			text-align: center; /* Center the heading */
+			margin-top: 10px; /* Add some space from the top */
+			color: #7d7d7d;
+		}
     </style>
 </head>
 <body>
@@ -73,49 +94,68 @@
 
     <!-- Tab container -->
     <div class="tabs">
-        <div class="tab active" onclick="showTab('current_work')">Current Work</div>
+        <div class="tab active" onclick="showTab('main')">Look and Then Look Again</div>
 		<div class="tab" onclick="showTab('previous_work')">Previous Work</div>
         <div class="tab" onclick="showTab('text')">About the Artist</div>
     </div>
 
-    <!-- Tab content for 'current work' -->
-    <div id="current_work" class="tab-content active-content image-gallery">
-			<img src="img/number_11_ploughing_10x8.jpg" alt="Image 1">
+    <!-- Tab content for 'main' -->
+    <div id="main" class="tab-content active-content image-gallery">
+		<pre>
+My name is Maria Healy and I am a local visual artist working in various mediums, in photography, glass, ceramics and textiles. Sometimes I combine mediums when required. In my current body of work, I am focusing on our beloved and beautiful Gearagh area. It exudes an atmosphere of the sublime and of absence present. It is a deeply layered terrain of remains, memories and histories, which take on another reality with the knowledge that this area hides a submerged village. 
+		
+Using my own photographs as a starting point and combining them with old photographs from a family who lived in the Anahala area during the 1930’s and 40’s, I digitally manipulate them to produce a juxtaposition or double exposure of then and now.
+		
+Everyday life in all its vibrancy and essence was being lived out there. Children playing, family picnics, men ploughing fields, thrashing and harvesting, visitors posing for a photo, potatoe pickers pausing for a break and girls chatting by a car. Ordinary life in everyday living. But in October 1957, all this was to change forever. These precious images are some of the few remaining to show us the life that was.
+		
+So now when you take a walk in the Gearagh, look with the deeper knowledge and reflect on what happened here because all around you are fleeting glimpses of the life which once thrived here. Hopefully it will not be consigned to the history archives but will live on in our imagination.</pre>
+		
+		<img src="img/number_11_ploughing_10x8.jpg" alt="Image 1_1">
+		<p class="image-title">Ploughing Through Water</p>
+		
+		<img src="img/cottage-reflection.jpg" alt="Image 1_2">
+		<p class="image-title">Cottage Reflection</p>
+		
+		<img src="img/Picnic-in-a-watery-field-7x7.jpg" alt="Image 1_3">
+		<p class="image-title">Picnic in a Watery Field</p>
+		
+		<img src="img/Catchup-in-the-reeds-7x7.jpg" alt="Image 1_4">
+		<p class="image-title">Catchup in the Reeds</p>
+		
+		<img src="img/Playing-in-the-trees-10x8.jpg" alt="Image 1_5">
+		<p class="image-title">Playing in the Trees</p>
+		
+		<img src="img/Playing-on-the-Port-road-7x7.jpg" alt="Image 1_6">
+		<p class="image-title">Playing on the Port Road</p>
+		
+		<img src="img/Thrashing-8x10.jpg" alt="Image 1_7">
+		<p class="image-title">Thrashing</p>
+		
+		<img src="img/View-of-a-submersion.jpg" alt="Image 1_8">
+		<p class="image-title">View of a Submersion</p>
+		
+		<img src="img/wave-house-8x10.jpg" alt="Image 1_9">
+		<p class="image-title">Wave House</p>
     </div>
 	
 	<!-- Tab content for 'previous work' -->
     <div id="previous_work" class="tab-content image-gallery">
-		<img src="img/DSC_2124.JPG" alt="Image 2">
-		<img src="img/DSC_2147.JPG" alt="Image 3">
-		<img src="img/DSC_2764.JPG" alt="Image 4">
-		<img src="img/IMG_1036.jpg" alt="Image 5">
+		<img src="img/DSC_2124.JPG" alt="Image 2_1">
+		<img src="img/DSC_2147.JPG" alt="Image 2_2">
+		<img src="img/DSC_2764.JPG" alt="Image 2_3">
 
     </div>
 
 
     <div id="text" class="tab-content">
-        <p>I am a visual artist concentrating mainly in glass and textiles but sometimes in
-		ceramics. Using my own photographs, as a starting point, I manipulate them
-		digitally and this helps to drive the creativity. My current body of work is
-		about a local area which exudes an atmosphere of the sublime and of absent
-		present. I find that the traces, layers and fragments evoke a response in me. I
-		am hoping to translate these subtle traces through my art.
-		It is a deeply layered terrain of remains, memories and histories, which take on
-		another reality with the knowledge that all this area is actually a submerged
-		village. I am trying to create something tangible from an otherwise fleeting
-		memory. I am using glass as a metaphor for water. I love the translucent
-		quality of it. I am working with textiles, using threads as a metaphor for
-		connections, weaving past into present with all its colours and textures. Also,
-		by combining glass and textiles I want to depict the water which hides a fragile
-		unravelled fabric of life past.
-		I am piecing together the fragments to weave a narrative. I experiment with
-		the visual fragments dismantling them and then reforming them again in
-		another narrative which echoes what happened on this site in the past.
-		I am using the idea of mise-en-abyme, a condition in a work of art where a
-		fragment replicates the entire composition. One of the techniques I use is Pate
-		de Verre which is fragments of crushed glass, pasted together in a mold and
-		fired in the kiln. This process lends itself well to my theme of fragmentation
-		and the resulting work is very delicate and almost ephemeral in quality.</p>
+        <pre>
+I am a visual artist concentrating mainly in glass and textiles but sometimes in ceramics. Using my own photographs, as a starting point, I manipulate them digitally and this helps to drive the creativity. My current body of work is about a local area which exudes an atmosphere of the sublime and of absent present. I find that the traces, layers and fragments evoke a response in me. I am hoping to translate these subtle traces through my art.
+
+It is a deeply layered terrain of remains, memories and histories, which take on another reality with the knowledge that all this area is actually a submerged village. I am trying to create something tangible from an otherwise fleeting memory. I am using glass as a metaphor for water. I love the translucent quality of it. I am working with textiles, using threads as a metaphor for connections, weaving past into present with all its colours and textures. Also, by combining glass and textiles I want to depict the water which hides a fragile unravelled fabric of life past. 
+
+I am piecing together the fragments to weave a narrative. I experiment with the visual fragments dismantling them and then reforming them again in another narrative which echoes what happened on this site in the past. 
+
+I am using the idea of mise-en-abyme, a condition in a work of art where a fragment replicates the entire composition. One of the techniques I use is Pate de Verre which is fragments of crushed glass, pasted together in a mold and fired in the kiln. This process lends itself well to my theme of fragmentation and the resulting work is very delicate and almost ephemeral in quality.</pre>
     </div>
 
     <script>
